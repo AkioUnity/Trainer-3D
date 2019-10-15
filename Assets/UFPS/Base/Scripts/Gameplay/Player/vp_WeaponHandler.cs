@@ -131,6 +131,8 @@ public class vp_WeaponHandler : MonoBehaviour
 
 		if(Weapons != null)
 			StartWeapon = Mathf.Clamp(StartWeapon, 0, Weapons.Count);
+		
+		Debug.Log(Weapons);
 
 	}
 
@@ -191,7 +193,8 @@ public class vp_WeaponHandler : MonoBehaviour
 		// start out with the first weapon list by default. on a 1st person
 		// player, this would typically be the weapons stored under the camera
 		Weapons = m_WeaponLists[0];
-		
+		Debug.Log(m_WeaponLists);
+		Debug.Log(Weapons);
 	}
 
 
