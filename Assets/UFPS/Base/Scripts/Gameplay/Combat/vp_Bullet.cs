@@ -201,6 +201,7 @@ public class vp_Bullet : MonoBehaviour
 		// move transform to impact point in order for the audio source to play
 		// impact sound at the correct 3d position
 		m_Transform.position = m_Hit.point;
+		Debug.Log(m_Hit.point);
 
 		// adopt the normal of the surface hit
 		m_Transform.rotation = Quaternion.LookRotation(m_Hit.normal);
@@ -236,14 +237,22 @@ public class vp_Bullet : MonoBehaviour
 	{
 
 		Rigidbody body = m_Hit.collider.attachedRigidbody;
-
+		
+		AScore score = m_Hit.collider.GetComponent<AScore>();
+		if (score)
+		{
+			Debug.Log(score.isCenter+":"+ m_Hit.point);
+			score.SetScore();
+//			return;
+		}
+		
 		if (body == null)
 			return;
 
 		if(body.isKinematic)
 			return;
 
-		body.AddForceAtPosition(((m_Ray.direction * Force) / Time.timeScale) / vp_TimeUtility.AdjustedTimeScale, m_Hit.point);
+//		body.AddForceAtPosition(((m_Ray.direction * Force) / Time.timeScale) / vp_TimeUtility.AdjustedTimeScale, m_Hit.point);
 	
 	}
 

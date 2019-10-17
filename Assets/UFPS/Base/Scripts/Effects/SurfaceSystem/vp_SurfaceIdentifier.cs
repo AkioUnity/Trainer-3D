@@ -1,7 +1,7 @@
 /////////////////////////////////////////////////////////////////////////////////
 //
 //	vp_SurfaceIdentifier.cs
-//	© Opsive. All Rights Reserved.
+//	?Opsive. All Rights Reserved.
 //	https://twitter.com/Opsive
 //	http://www.opsive.com
 //
@@ -29,7 +29,7 @@ public class vp_SurfaceIdentifier : MonoBehaviour
 	public int SurfaceID;
 
 #if UNITY_EDITOR
-	[vp_HelpBox("• 'SurfaceType' determines what the object's surface is made of, and what vp_SurfaceEffect it will trigger when it gets hit by something.\n\n• 'Allow Decals' determines whether bullet holes and footprints can stick to the surface of the object. It will override any SurfaceManager settings for this particular object.\n\n• NOTE: 'SurfaceID' is only provided for backwards compatibility with the old UFPS 'vp_FootStepManager'. it is not used by vp_SurfaceManager", UnityEditor.MessageType.None, null, null, false, vp_PropertyDrawerUtility.Space.Nothing)]
+	[vp_HelpBox("?'SurfaceType' determines what the object's surface is made of, and what vp_SurfaceEffect it will trigger when it gets hit by something.\n\n?'Allow Decals' determines whether bullet holes and footprints can stick to the surface of the object. It will override any SurfaceManager settings for this particular object.\n\n?NOTE: 'SurfaceID' is only provided for backwards compatibility with the old UFPS 'vp_FootStepManager'. it is not used by vp_SurfaceManager", UnityEditor.MessageType.None, null, null, false, vp_PropertyDrawerUtility.Space.Nothing)]
 	public float surfaceTypeHelp;
 #endif
 

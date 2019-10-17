@@ -7,6 +7,7 @@ public class TargetController : MonoBehaviour
     public Transform parent;
     public GameObject rotateObj;
     public Transform target;
+    public Transform targetCenter;
     public Transform player;
 
     private float x1=117;
@@ -40,6 +41,9 @@ public class TargetController : MonoBehaviour
     void RemoveBullet()
     {
         foreach (Transform child in target.transform) {
+            GameObject.Destroy(child.gameObject);
+        }
+        foreach (Transform child in targetCenter.transform) {
             GameObject.Destroy(child.gameObject);
         }
     }
